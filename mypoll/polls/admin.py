@@ -3,7 +3,11 @@ from django.contrib import admin
 # Register your models here.
 from .models import Question, Choice
 
-# we use TabularInline so that the choices show with the questions within our admin. ChoiceInline extends from TabularInline
+admin.site.site_header = "MyPoll Admin"
+admin.site.site_title = "MyPoll Admin Area"
+admin.site.index_title = "Welcome to the MyPoll Admin Area"
+
+# we use TabularInline so that the Admin has the ability to view/edit the choices from the parent model, Question, page. ChoiceInline extends from TabularInline, a built-in Django class.
 class ChoiceInline(admin.TabularInline):
     model = Choice
     extra = 3  # how many extra fields do we want
