@@ -1,6 +1,7 @@
 # MyPoll
 
 **Python | Django | PyTest**
+
 To improve my Python skills and try out the Django framework, I'm working on a simple polling app.
 
 ### Notes to self
