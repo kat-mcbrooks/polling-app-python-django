@@ -18,7 +18,7 @@ from django.urls import include, path  # we use include to bring in another urls
 
 urlpatterns = [
     # whenever we go to any polls route on the browser, it needs to look inside the polls.urls file:
+    path("", include("pages.urls")),
     path("polls/", include("polls.urls")),
-    path("/", include("pages.urls")),
     path("admin/", admin.site.urls),
 ]
