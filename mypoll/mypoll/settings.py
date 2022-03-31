@@ -50,7 +50,7 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
-ROOT_URLCONF = "mypoll.urls"
+ROOT_URLCONF = "mypoll.urls"  # this tells django to load the mypoll.urls whenever someone makes a request at /polls
 
 TEMPLATES = [
     {
