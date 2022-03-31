@@ -10,5 +10,5 @@ urlpatterns = [
     # use angle brackets to 'capture' this part of the url and sends it as a keyword arg to the relevant function in views.py
     # # e.g. /polls/5/results
     path("<int:question_id>/results/", views.results, name="results"),
-    path("<int:question_id>/results/", views.vote, name="vote"),
+    path("<int:question_id>/vote/", views.vote, name="vote"),
 ]
