@@ -1,12 +1,23 @@
-<h1>{{ question.question_text }}</h1>
+{% extends 'base.html' %} {% block content %}
 
-<ul>
+<h1 class="mb-5 text-center">{{ question.question_text }}</h1>
+
+<ul class="list-group mb-5">
   {% for choice in question.choice_set.all %}
-  <li>
-    {{ choice.choice_text }} -- {{ choice.votes }} vote{{ choice.votes|pluralize
-    }}
+  <li class="list-group-item">
+    {{ choice.choice_text }}
+    <span class="badge rounded-pill bg-success float-end"
+      >{{ choice.votes }} vote{{ choice.votes | pluralize }}</span
+    >
   </li>
   {% endfor %}
 </ul>
-
-<a href="{% url 'polls:detail' question.id %}">Vote again?</a>
+<a class="btn btn-success btn-sm mb-3" href="{% url 'polls:index' %}"
+  >Back To Poll Questions</a
+>
+<a
+  class="btn btn-success btn-sm mb-3"
+  href="{% url 'polls:detail' question.id %}"
+  >Vote again?</a
+>
+{% endblock %}
