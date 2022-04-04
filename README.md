@@ -1,4 +1,4 @@
-# MyPoll
+# DigiPolls
 
 **Python | Django | PyTest**
 
